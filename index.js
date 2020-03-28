@@ -3,7 +3,9 @@ const express = require('express');
 const Controller = require('./controller')
 const app = express();
 
-app.get('/', Controller.lesik)
+app.get('/', (req, res) => {
+  res.send('hello')
+})
 
 app.get('/api/get-cards', Controller.getCards)
 
